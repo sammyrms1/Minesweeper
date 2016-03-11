@@ -140,6 +140,14 @@ public class MSButton
             numBombs++;
         if(isValid(row,col+1) && bombs.contains(buttons[row][col+1]))
             numBombs++;
+        if(isValid(row-1,col-1) && bombs.contains(buttons[row-1][col-1]))
+            numBombs++;
+        if(isValid(row+1,col+1) && bombs.contains(buttons[row+1][col+1]))
+            numBombs++;
+        if(isValid(row+1,col-1) && bombs.contains(buttons[row+1][col-1]))
+            numBombs++;
+        if(isValid(row-1,col+1) && bombs.contains(buttons[row-1][col+1]))
+            numBombs++;
         // System.out.println(numBombs);
         return numBombs;
     }
